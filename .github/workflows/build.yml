@@ -24,6 +24,7 @@ jobs:
         uses: operatehappy/packer-github-actions@master
         with:
           command: fix
+          target: packer.json
 
       # validate templates
       - name: Validate Template
