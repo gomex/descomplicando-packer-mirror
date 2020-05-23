@@ -36,8 +36,8 @@ jobs:
 
       # Install Ansible
       - name: Install xmllint
-        run: sudo apt-get install ansible -y
-        
+        run: sudo apt-get install ansible packer -y
+
       # build artifact
       - name: Packer AMI Build
         uses: zmingxie/packer-ami-builder@master
