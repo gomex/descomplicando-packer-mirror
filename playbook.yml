@@ -1,0 +1,7 @@
+- hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+    - role: nginxinc.nginx
+  vars:
+    nginx_sitename: gomex.me

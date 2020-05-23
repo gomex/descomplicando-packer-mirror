@@ -1,0 +1,4 @@
+- src: https://gitlab.com/Gomex/nginx.git
+  scm: git
+
+- src: nginxinc.nginx

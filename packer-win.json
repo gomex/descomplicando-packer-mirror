@@ -1,0 +1,25 @@
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "us-east-1",
+    "instance_type": "t2.micro",
+    "ami_name": "Windows server {{timestamp}}",
+    "user_data_file": "./ScriptWinRM.ps1",
+    "communicator": "winrm",
+    "winrm_username": "Administrator",
+    "winrm_use_ssl": true,
+    "winrm_insecure": true,
+    "source_ami_filter": {
+      "filters": {
+        "name": "Windows_Server-2016-English-Full-Base-*"
+      },
+      "owners": ["801119661308"],
+      "most_recent": true
+    }
+  }],
+  "post-processors": [
+    {
+      "type": "manifest"
+    }
+  ]
+}
